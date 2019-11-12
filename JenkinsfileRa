@@ -20,5 +20,14 @@ node {
         subject: 'Jenkins Job', 
         to: 'rakhee.balaraman@gmail.com'
     }
+    
+    stage ('Slack Notification'){
+        slackSend 
+        channel: '#devops', 
+        color: 'good', 
+        message: 'Welcome to Jenkins, Slack', 
+        teamDomain: 'Cloud9.slack.com', 
+        tokenCredentialId: 'slackToken'
+    }
 }
 
