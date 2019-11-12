@@ -22,11 +22,10 @@ node {
     }
     
     stage ('Slack Notification'){
-        slackSend 
-        channel: '#devops', 
+        slackSend channel: 'devops', 
         color: 'good', 
-        message: 'Welcome to Jenkins, Slack', 
-        teamDomain: 'Cloud9.slack.com', 
+        message: 'Hello from Jenkins', 
+        teamDomain: 'cloudnine-group', 
         tokenCredentialId: 'slackToken'
     }
 }
