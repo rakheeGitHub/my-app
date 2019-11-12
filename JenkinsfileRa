@@ -53,5 +53,9 @@ node {
         tokenCredentialId: 'slackToken'
         
     }
+    stage ('Deploy to staging') {
+        sh 'scp -o StrictHostKeyChecking=no target/*.war cloud_user@13.127.41.232:/opt/tomcat8/webapps'
+    }
+    
 }
 
