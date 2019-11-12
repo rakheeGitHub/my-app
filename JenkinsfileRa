@@ -1,0 +1,11 @@
+
+node {
+    stage ('Checkout SCM') {
+        git 'https://github.com/rakheeGitHub/my-app'
+    }
+    
+    stage ('Compile-Package') {
+        sh 'mvn package'
+    }
+}
+
