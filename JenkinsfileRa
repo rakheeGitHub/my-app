@@ -1,5 +1,8 @@
 
 node {
+
+    def mvnHome = tool 'mavenTool'
+        
     stage ('Checkout SCM') {
         git 'https://github.com/rakheeGitHub/my-app'
     }
